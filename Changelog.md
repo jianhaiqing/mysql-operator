@@ -10,7 +10,6 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 ### Removed
 ### Fixed
- * rclone extra arguments are now properly passed to the backup job.
 
 
 ## [0.4.0] - TBD
@@ -66,6 +65,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
    is larger than the default `1`. If MySQL server runs out of available connections, using `extra_port`
    allows the exporter to continue collecting MySQL metrics.
  * Change the default number of workers for orchestrator controller from 1 to 10.
+ * Set timeout of 15s on connection between the operator and Orchestrator
+ * Bump controller-util dependency to 0.1.18 which fixes some updates on pod spec.
 ### Removed
 ### Fixed
  * Update and fix e2e tests
@@ -74,6 +75,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
  * Copy the nodeSelector as-is in the statefulset (fixes #454)
  * Fix flakines in ReadOnly cluster condition (fixes #434)
  * Fix rounding in computing `innodb-buffer-pool-size` (fixes #501)
+ * rclone extra arguments are now properly passed to the backup job.
 
 
 ## [0.3.8] - 2020-01-22
